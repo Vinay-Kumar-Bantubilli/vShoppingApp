@@ -1,0 +1,81 @@
+.navbar{
+    display:flex;
+    list-style: none;
+    background-color: rgb(34, 34, 56);
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    padding: 15px 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.vShopping{
+    color: aqua;
+    font-size: 25px;
+    line-height: 20px;
+    margin: 15px 20px;
+    margin-left: 60px;
+}
+li{
+    margin: 15px 10px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 10px;
+}
+a:hover{
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 0px 1px 2px aqua;
+    background-color: rgb(44, 44, 65);
+}
+.active{
+    border-radius: 2px;
+    box-shadow: 0px 1px 2px aqua;
+    background-color: rgb(44, 44, 65);
+}
+.icon{
+    
+}
+#icon{
+    display: flex;
+    margin-left: 60px;
+}
+button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 15px;
+}
+.home{
+    margin-left: 365px;
+}
+#bars{
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    left: 50px;
+    top: 28px;
+    font-size: 25px;
+}
+.search{
+    border: none;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    opacity: 0.6;
+    padding: 8px 20px;
+    position: absolute;
+    top: 25px;
+}
+.search:hover{
+    border-color: aqua;
+}
+.button{
+    background-color: aqua;
+    padding: 7px;
+    position: relative;
+    border-radius: 0px 4px 4px 0px;
+    left: 180px;
+    bottom: 5px;
+    color: black;
+    cursor: pointer;
+}

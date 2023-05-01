@@ -1,0 +1,48 @@
+<div class="item">
+    <div class="image">
+        <img [src]="product.image" alt="">
+    </div>
+    <div class="desc">
+        <h3>Category : {{product.name | titlecase}}</h3><br>
+
+        <h1>{{product.price | currency :'INR'}}</h1>
+        <del class="cross"><h2>{{product.price | currency:'INR'}}</h2></del><br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, ab Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, quia.</p><br>
+        <div class="buttons">
+            <button class="cart" (click)="addItem(product)">Add to Cart</button>
+            <button class="buy">Buy Now</button>
+        </div><br>
+        <div class="offer">
+            <div class="bank">
+                <b>bank offer :</b>
+                <p>Bank Offer
+                    Upto ₹250.00 discount on HSBC Cashback Credit CardsUpto ₹250.00 discount on HSBC Cashback Credit C…
+                </p>
+            </div>
+            <div class="cashback">
+                <b>cashback :</b>
+                <p>Bank Offer
+                    Upto ₹250.00 discount on HSBC Cashback Credit CardsUpto ₹250.00 discount on HSBC Cashback Credit C…
+                </p>
+            </div>
+            <div class="cashback">
+                <b>cashback :</b>
+                <p>Bank Offer
+                    Upto ₹250.00 discount on HSBC Cashback Credit CardsUpto ₹250.00 discount on HSBC Cashback Credit C…
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <p>
+        About this item
+Spacious stroller with heavy duty wheels - Best choice for outdoor use. Comes with Reversible handle bar that helps mom stroll facing baby.
+Certified as per European Standard EN 1888. It has 5 point safety harness for child safety and Easy One Hand Fold
+Soft cushioned seat with side padding & 3 level seat recline for sleeping, relaxing and sitting. 360 degree front wheel rotation with swivel lock and brakes, rear wheel link brakes
+Comes with detachable food tray for babies. There is also a huge under seat storage basket to keep baby essentials
+Adjustable foldable Canopy with peek-a-boo window and Adjustable Leg Support with Footrest
+maximum_weight_recommendation : 15
+item_weight : 12.64
+    </p>
+</div>

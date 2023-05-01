@@ -1,0 +1,40 @@
+
+<ul class="navbar" >
+    <li>
+        <p (click)="openBar()"><i id="bars" class="fa-solid fa-bars" ></i></p>
+    </li>
+    <b class="vShopping">vShopping</b>
+    <li class="home">
+        <a routerLink="home" routerLinkActive="active" >Home</a>
+    </li>
+    <li>
+        <a routerLink="about" routerLinkActive="active" >About</a>
+    </li>
+    <li>
+        <a routerLink="contact" routerLinkActive="active" >Customer Service</a>
+    </li>
+    <!-- <li>
+        <input class="search" type="text" placeholder="search here" #input>
+        <button class="button" (click)="getSearchValue(input)"><i id="button" class="fa-solid fa-magnifying-glass"></i></button>
+    </li> -->
+   <div id="icon">
+    <li class="icon">
+        <a routerLink="likes" routerLinkActive="active"><i class="fa-solid fa-heart"></i></a>
+    </li>
+    <li class="icon">
+        <a routerLink="kart" routerLinkActive="active"><i class="fa-solid fa-cart-shopping"></i></a>
+    </li>
+    <li class="icon">
+        <a href="login" ><button>Sign in</button></a>
+    </li>
+
+    <li class="icon" id="user">
+        <a routerLink="user" routerLinkActive="active"><i class="fa-solid fa-user"></i></a>
+    </li>
+   </div>
+    
+</ul>
+
+<div (click)="closeBar()">
+    <app-bars [hidden]="hideBarVar"></app-bars>
+</div>

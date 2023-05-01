@@ -1,0 +1,86 @@
+.main{
+    margin: 0px;
+    padding: 30px;
+    background-color: rgb(255, 228, 228);
+    height: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.itemList{
+    width: 1100px;
+    background-color: white;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+.body{
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+    height: auto;
+    background-color: white;
+    justify-content: center;
+    padding: 10px 0px;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: auto;
+
+}
+h2{
+    margin: 15px;
+}
+.product{
+    margin: 10px;
+    width: 800px;
+    display: flex;
+}
+.image{
+    width: 50px;
+    height: 50px;
+}
+img{
+    overflow: auto;
+    margin-left: 20px;
+}
+.price{
+    color: green;
+    margin: 5px;
+}
+.discount{
+    color: red;
+    margin: 5px;
+
+}
+.amount{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+}
+.a{
+    display: flex;
+}
+.qty{
+    display: flex;
+    margin-left: 40px;
+}
+.delete{
+    margin-left: 50px;
+    border:none;
+    background-color: rgb(207, 0, 0);
+    padding: 8px 10px;
+    border-radius: 3px;
+    color: white;
+}
+button{
+    border: none;
+    background-color: green;
+    padding: 8px 20px;
+    border-radius: 3px;
+    color: white;
+    margin-left: 40px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(0, 168, 0);
+}

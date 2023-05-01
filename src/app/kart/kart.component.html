@@ -1,0 +1,39 @@
+<div class="main">
+    <h2>Shopping Cart</h2>
+    <br>
+    <hr>
+    <br>
+    <div *ngFor="let a of product ; index as i" class="body">
+        <img [src]="a.image" alt="no image found">
+        <div class="product">
+            <div>
+                <p>{{a.name}}</p>
+                <b>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt, cum.</b>
+                <br>
+                <div class="a">
+                    <p>color : {{a.color}}</p>
+                    <div class="qty">
+                        <select name="qty" id="" #qty (change)="getQuantity(qty,a.price)">
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+                    <button class="delete" (click)="deleteItem(i)">delete</button>
+                </div>
+            </div>
+        </div>
+        <div class="amount">
+            <h3 class="price">{{(a.price) | currency:'INR'}}</h3>
+            <del class="discount"><p>{{a.price | currency:'INR'}}</p></del>
+        </div> 
+    </div> 
+    <div class="total">
+        <h3>Total Price is : {{total | currency:"INR"}}</h3>
+        <button title="i'm unable get this logic">Proceed to</button>
+    </div>  
+    
+</div>

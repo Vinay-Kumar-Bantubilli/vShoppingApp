@@ -1,0 +1,25 @@
+<div class="main">
+    <h2>Your Wishlist</h2>
+    <br>
+    <hr>
+    <br>
+    <div *ngFor="let a of product ; index as i" class="body">
+        <img [src]="a.image" alt="no image found">
+        <div class="product">
+            <div>
+                <p>{{a.name}}</p>
+                <b>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt, cum.</b>
+                <br>
+                <div class="a">
+                    <p>color : {{a.color}}</p>
+                    <button class="delete" (click)="deleteItem(i)">unlike</button>
+                    <button class="buy">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="amount">
+            <h3 class="price">{{(a.price) | currency:'INR'}}</h3>
+            <del class="discount"><p>{{a.price | currency:'INR'}}</p></del>
+        </div>
+    </div>   
+</div>

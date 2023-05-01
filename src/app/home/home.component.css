@@ -1,0 +1,36 @@
+.array{
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+img{
+    width: 100vw;
+    height: 80vh;
+    position: fixed;
+    overflow-x: hidden;
+    cursor: pointer;
+    display: inline;
+}
+h1{
+    position: absolute;
+    color: black;
+    z-index: 1;
+}
+.previous{
+    top: 35vh;
+    left: 0px;
+}
+.next{
+    top: 35vh;
+    right: 0px;
+}
+i{
+    font-size: 30px;
+    padding: 20px 5px;
+}
+i:hover{
+    background-color: rgb(29, 29, 49);
+    text-shadow: 1px 1px 3px aqua;
+    color: white;
+    cursor: pointer;
+}

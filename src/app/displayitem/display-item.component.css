@@ -1,0 +1,84 @@
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.image{
+    height: 400px;
+    width: 360px;
+
+}
+img{
+    /* background-size: 100%;
+     */
+    
+}
+.desc{
+    padding: 50px;
+    padding-bottom: 80px;
+    width: 400px;
+    height: 300px;
+    background-color: antiquewhite;
+    position: relative;
+    right: 80px;
+    border-radius: 20px;
+}
+.buttons{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+button{
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 100px;
+}
+.cross{
+    color: red;
+}
+.cart{
+    background-color: orange;
+}
+.cart:hover{
+    background-color: rgb(255, 195, 84);
+}
+.buy{
+    background-color: rgb(122, 190, 18);
+
+}
+.buy:hover{
+    background-color: rgb(179, 255, 66);
+}
+.offer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.bank{
+    border: 1px solid gray;
+    border-radius: 8px;
+    height: 80px;
+    width: 90px;
+    overflow: hidden;
+    padding: 5px;
+
+}
+.cashback{
+    border: 1px solid gray;
+    border-radius: 8px;
+    height: 80px;
+    width: 90px;
+    overflow: hidden;
+    padding: 5px;
+
+}
+b{
+    color: brown;
+    text-decoration: underline;
+}
+.bank, .offer{
+}

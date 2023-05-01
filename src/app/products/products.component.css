@@ -1,0 +1,70 @@
+.products{
+    max-width: 100%;
+    max-height: 100%;   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgb(231, 231, 231);
+}
+.each{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    padding: 20px;
+    width: 320px;
+    height: 470px; 
+    align-items: center;
+    background-color: white;
+    justify-content: center;
+    overflow: hidden;
+}
+.image{
+    width: 70px;
+    height: 70px;
+    overflow: auto;
+}
+img{
+    overflow: auto;
+}
+b{
+    margin: 15px 0px;
+}
+.buy{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-self: end;
+}
+button{
+    margin: 5px 0px;
+    width: 80px;
+    height: 32px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+}
+.cart{
+    background-color: orange;
+}
+.buyb{
+    background-color: rgb(40, 189, 40);
+}
+.buyb:hover{
+    background-color: rgb(0, 228, 0);
+}
+.cart:hover{
+    background-color: rgb(255, 189, 66);
+}
+.likeDiv{
+    margin: 20px;
+    width: 40px;
+    height: 40px;
+}
+.likes{
+
+    cursor: pointer;
+    color: black;
+    font-size: 20px;
+}

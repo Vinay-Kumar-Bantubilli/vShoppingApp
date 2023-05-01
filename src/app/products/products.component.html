@@ -1,0 +1,32 @@
+<div class="products" >
+    <div  *ngFor="let a of product" #product>
+        <!-- *ngIf="a.name.toLowerCase().includes(searchValue) || searchValue===''" -->
+        <div class="each">
+            <a  [routerLink]="['/displayitem', a.id]"  routerLinkActive="active">
+                <img [src]="a.image" alt="no Image Found"> 
+            </a>
+           
+            <div class="buy">
+                <div>
+                    <b >{{a.name | titlecase}}</b><br>
+                    <h2>{{a.price | currency : 'INR'}}</h2>
+                    <del style="color: red;"><b>{{a.price | currency : 'INR'}}</b></del>
+                </div>
+               <div class="likeDiv">
+                <p class="likes" (click)="addToWishlist(a.id, a)" *ngIf="b%2 ==0; else elseBlock"><i class="fa-regular fa-heart"></i></p>
+                <p id="unlike" class="likes" (click)="removeFromWishlist(a.id)" *ngIf="b%2 ==1 && a.id == id;" style="color:rgb(255, 0, 43); font-size: 24px;">❤</p>
+                <p class="likes" (click)="addToWishlist(a.id, a)" *ngIf="b%2 ==1 && a.id != id"><i class="fa-regular fa-heart"></i></p>
+                <ng-template #elseBlock>
+                    
+                </ng-template>
+               </div>
+                <div class="buying">
+                    <button class="cart" (click)="addItem(a)">Add to cart</button><br>
+                    <a [routerLink]="['/displayitem', a.id]"  routerLinkActive="active">
+                        <button class="buyb">Buy Now</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

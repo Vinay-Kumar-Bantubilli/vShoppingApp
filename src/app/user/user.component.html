@@ -1,0 +1,12 @@
+<h1>Your Account</h1>
+<h2>Some things you can do here</h2>
+
+<div *ngFor="let a of images">
+    <div class="a">
+        <img [src]="a.gif" alt="No Image Found">
+        <div class="desc">
+            <h4>{{a.name}}</h4>
+            <p>{{a.desc}}</p>
+        </div>
+    </div>
+</div>
