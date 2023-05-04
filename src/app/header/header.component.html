@@ -24,11 +24,13 @@
     <li class="icon">
         <a routerLink="kart" routerLinkActive="active"><i class="fa-solid fa-cart-shopping"></i></a>
     </li>
-    <li class="icon">
-        <a href="login" ><button>Sign in</button></a>
+    <li class="icon" id="users">
+        <p class="name" *ngIf="accountHolderName != ''">{{accountHolderName}}</p>
+        <a class="login" href="/login" *ngIf="accountHolderName == null"><button>login</button></a>
     </li>
 
     <li class="icon" id="user">
+        
         <a routerLink="user" routerLinkActive="active"><i class="fa-solid fa-user"></i></a>
     </li>
    </div>

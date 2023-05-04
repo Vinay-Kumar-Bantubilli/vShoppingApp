@@ -1,4 +1,4 @@
-import { Component, OnChanges, DoCheck, AfterViewInit } from '@angular/core';
+import { Component, OnChanges, DoCheck, AfterViewInit, AfterContentInit, AfterContentChecked} from '@angular/core';
 import { CartService } from '../services/cart.service';
 
 @Component({
@@ -7,11 +7,13 @@ import { CartService } from '../services/cart.service';
   styleUrls: ['./kart.component.css']
 })
 export class KartComponent {
-  constructor(private cs:CartService){};
+  constructor(private cs:CartService){
+  };
   product = this.cs.cartArray;
 
   total:number = 0;
-  ngAfterViewInit(){
+  
+  ngAfterContentChecked(){
     for (let a of this.cs.cartArray){
       this.total+=a.price;
       console.log("total amount is : "+this.total)
@@ -27,9 +29,10 @@ export class KartComponent {
     console.log(this.total)
   }
 
-  deleteItem(index:any){
+  deleteItem(index:any, price:any){
     console.log(index)
     this.cs.deleteItems(index);
+    this.total-=price;
   }
 
 

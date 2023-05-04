@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, DoCheck } from '@angular/core';
 import { Router } from '@angular/router';
+import { UsersService } from '../services/users.service';
 
 @Component({
   selector: 'app-user',
@@ -17,12 +18,24 @@ export class UserComponent {
     {name:"Contact Us", desc:"Track Packages Edit or Cancel Item", gif:"../../assets/account2.png", navigate:'contact'},
   ]
 
+
+
   // navigate!:string;
-  // constructor(private r:Router) {}
   // direct(){
   //   console.log(this.navigate);
   //   this.r.navigate(['user'],{
   //     queryParams:{'category':this.navigate}
   //   });
   // }
+
+  constructor(private r:Router, private users:UsersService) {}
+  userName:string = "";
+  ngDoCheck(){
+    this.userName = this.users.name;
+    console.log("ngDoCheck"+this.userName)
+  }
+
+  toLoginPage(){
+    this.r.navigate(['login']);
+  }
 }

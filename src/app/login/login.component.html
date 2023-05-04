@@ -1,1 +1,28 @@
-<p>login works!</p>
+<div>
+    <h1>Welcome to vShopping</h1>
+</div>
+<div class="card w-30 mx-auto mt-5">
+    <h3 class="card-header">login page</h3>
+    <div class="card-body">
+        <form #ref="ngForm" (ngSubmit)="loginsuccess(ref, un, cp)">
+            <div class="form-group mt-1" >
+                <label for="">Enter Name</label>
+                <input title="eg : Vinay kumar" type="text" ngModel #un="ngModel" name="username" required class="form-control" minlength="5" [(ngModel)]="loginObj.name">
+                <div class="req" *ngIf="ref.controls['username']?.['touched'] && ref.controls['username']?.['errors']">
+                    <p *ngIf="ref.controls['username']?.['errors']?.['required']">Name is required</p>
+                    <p *ngIf="ref.controls['username']?.['errors']?.['minlength']">Name is required</p>
+                </div>
+            </div>
+    
+            <div class="form-group mt-1">
+                <label for="">Password</label>
+                <input title="eg : password" type="password" ngModel #cp="ngModel" name="password" required class="form-control" [(ngModel)]="loginObj.password">
+            </div>
+
+            <button class="btn btn-primary mt-2" [disabled]="ref.invalid" >login</button>    
+        </form>
+        
+        <pre class="signup" (click)="openLoginPage()" >create new account</pre>
+
+    </div>
+</div>

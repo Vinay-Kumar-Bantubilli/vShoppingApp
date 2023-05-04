@@ -1,13 +1,14 @@
 .navbar{
+    margin: 0px;
     display: flex;
     list-style: none;
-    padding: 10px 5px;
-    background-color: rgb(207, 233, 255);
+    padding: 8px 30px;
+    background-color: rgb(167, 214, 255);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     flex-wrap: wrap;
 }
 li{
-    margin: 15px 15px;
+    margin: 5px 15px;
 }
 a{
     padding:8px 10px;

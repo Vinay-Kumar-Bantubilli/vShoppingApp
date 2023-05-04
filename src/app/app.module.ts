@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -16,22 +15,29 @@ import { UserComponent } from './user/user.component';
 import { LikesComponent } from './likes/likes.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProductsComponent } from './products/products.component';
-import { LoginComponent } from './login/login.component';
 import { SearchComponent } from './search/search.component';
 import { ProductsService } from './products.service';
 import { DisplayItemComponent } from './displayitem/display-item.component';
-// import { ɵɵsyntheticHostProperty } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { CartService } from './services/cart.service';
+import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { JsonPipe } from '@angular/common';
+import { UsersService } from './services/users.service';
+import { WishlistService } from './services/wishlist.service';
 
 
 
 
 const routes:Routes= [
   {path:'', component:HomeComponent},
-  {path:'login', component:LoginComponent},
-  {path:'search', component:SearchComponent},
   {path:'home', component:HomeComponent},
+  {path:'home', component:HomeComponent},
+  {path:'login', component:LoginComponent},
+  {path:'signup', component:SignupComponent},
+  {path:'loginsuccess', component:LoginsuccessComponent},
+  {path:'search', component:SearchComponent},
   {path:'about', component:AboutComponent},
   {path:'contact', component:ContactComponent},
   {path:'bars', component:BarsComponent},
@@ -62,9 +68,11 @@ const routes:Routes= [
     LikesComponent,
     NavbarComponent,
     ProductsComponent,
-    LoginComponent,
     SearchComponent,
     DisplayItemComponent,
+    LoginsuccessComponent,
+    LoginComponent,
+    SignupComponent,
     
   ],
   imports: [
@@ -72,9 +80,11 @@ const routes:Routes= [
     AppRoutingModule,
     FormsModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    JsonPipe
+
   ],
-  providers: [ProductsService, CartService],
+  providers: [ProductsService, CartService, UsersService, WishlistService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

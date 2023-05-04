@@ -1,11 +1,16 @@
-<h1>Your Account</h1>
+<div>
+    <h1>{{userName}}</h1>
+    <h1>Your Account</h1>
+    <button class="btn btn-danger mt-4" (click)="toLoginPage()">logout</button>
+</div>
+<hr>
 <h2>Some things you can do here</h2>
 
 <div *ngFor="let a of images">
     <div class="a">
         <img [src]="a.gif" alt="No Image Found">
         <div class="desc">
-            <h4>{{a.name}}</h4>
+            <b>{{a.name}}</b>
             <p>{{a.desc}}</p>
         </div>
     </div>

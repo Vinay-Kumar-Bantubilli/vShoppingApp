@@ -5,7 +5,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: rgb(231, 231, 231);
+    /* background-color: rgb(241, 241, 241); */
+    background-color: antiquewhite;
 }
 .each{
     display: flex;
@@ -16,13 +17,11 @@
     height: 470px; 
     align-items: center;
     background-color: white;
-    justify-content: center;
+    justify-content: space-around;
     overflow: hidden;
 }
 .image{
-    width: 70px;
-    height: 70px;
-    overflow: auto;
+    overflow: hidden;
 }
 img{
     overflow: auto;

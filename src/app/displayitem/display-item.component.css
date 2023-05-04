@@ -9,7 +9,6 @@
 .image{
     height: 400px;
     width: 360px;
-
 }
 img{
     /* background-size: 100%;
@@ -17,10 +16,10 @@ img{
     
 }
 .desc{
+    margin-top: 50px;
     padding: 50px;
-    padding-bottom: 80px;
-    width: 400px;
-    height: 300px;
+    width: 480px;
+    height: 550px;
     background-color: antiquewhite;
     position: relative;
     right: 80px;
@@ -62,7 +61,7 @@ button{
     border: 1px solid gray;
     border-radius: 8px;
     height: 80px;
-    width: 90px;
+    width: 130px;
     overflow: hidden;
     padding: 5px;
 
@@ -71,7 +70,7 @@ button{
     border: 1px solid gray;
     border-radius: 8px;
     height: 80px;
-    width: 90px;
+    width: 130px;
     overflow: hidden;
     padding: 5px;
 
@@ -81,4 +80,12 @@ b{
     text-decoration: underline;
 }
 .bank, .offer{
+}
+
+.card{
+    background-color: rgb(218, 218, 218);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 10px;
+
 }

@@ -1,8 +1,8 @@
 <div class="products" >
-    <div  *ngFor="let a of product" #product>
+    <div  *ngFor="let a of product" #product >
         <!-- *ngIf="a.name.toLowerCase().includes(searchValue) || searchValue===''" -->
-        <div class="each">
-            <a  [routerLink]="['/displayitem', a.id]"  routerLinkActive="active">
+        <div class="each" *ngIf="a.id > 0">
+            <a class="image" [routerLink]="['/displayitem', a.id]"  routerLinkActive="active">
                 <img [src]="a.image" alt="no Image Found"> 
             </a>
            

@@ -1,5 +1,8 @@
-import { Component, OnInit,OnChanges, Output } from '@angular/core';
+import { Component, OnInit,OnChanges, Output, DoCheck } from '@angular/core';
 import { Router } from '@angular/router';
+import { UsersService } from '../services/users.service';
+
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -29,7 +32,16 @@ export class HeaderComponent {
   }
 
 
-  constructor(private r:Router){}
+  constructor(private r:Router, private user:UsersService){}
+
+  accountHolderName!:any;
+  ngDoCheck(){
+    // this.accountHolderName = localStorage.getItem("user");
+    this.accountHolderName = this.user.name;
+    // console.log("ngDoCheck : name : "+this.accountHolderName)
+  }
+  
+
   //search
   // searchValue:string = "";
   // getSearchValue(searchValue:any){

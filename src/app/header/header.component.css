@@ -3,15 +3,22 @@
     list-style: none;
     background-color: rgb(34, 34, 56);
     font-family: Verdana, Geneva, Tahoma, sans-serif ;
-    padding: 15px 20px;
+    padding: 5px 30px;
     display: flex;
     flex-wrap: wrap;
+    margin: 0px;
+}
+.name{
+    color: white;
+}
+.login{
+    position: relative;
+    bottom: 15px;
 }
 .vShopping{
     color: aqua;
     font-size: 25px;
-    line-height: 20px;
-    margin: 15px 20px;
+    position: relative;
     margin-left: 60px;
 }
 li{
@@ -33,12 +40,11 @@ a:hover{
     box-shadow: 0px 1px 2px aqua;
     background-color: rgb(44, 44, 65);
 }
-.icon{
-    
-}
 #icon{
     display: flex;
-    margin-left: 60px;
+    flex-wrap: wrap;
+    position: relative;
+    top: 10px;
 }
 button{
     background-color: transparent;
@@ -47,14 +53,14 @@ button{
     font-size: 15px;
 }
 .home{
-    margin-left: 365px;
+    margin-left: 360px;
 }
 #bars{
     cursor: pointer;
     color: white;
     position: absolute;
     left: 50px;
-    top: 28px;
+    top: 27px;
     font-size: 25px;
 }
 .search{

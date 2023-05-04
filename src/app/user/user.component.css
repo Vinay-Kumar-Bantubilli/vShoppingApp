@@ -8,6 +8,9 @@ h2{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
+.btn{
+    float: right;
+}
 .a{
     border: 1px solid gray;
     position: relative;
@@ -29,4 +32,10 @@ h2{
     justify-content: center;
    
     /* justify-content: start; */
+}
+h4{
+    font-size: medium;
+}
+p{
+    font-size: 16px;
 }

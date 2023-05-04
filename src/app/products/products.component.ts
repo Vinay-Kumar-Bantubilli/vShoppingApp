@@ -10,7 +10,7 @@ import { WishlistService } from '../services/wishlist.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent {
-  constructor(private ps:ProductsService, private ar:ActivatedRoute, private r:Router, private cs:WishlistService){}
+  constructor(private ps:ProductsService, private ar:ActivatedRoute, private r:Router, private cs:CartService){}
   products = this.ps.products;
   product:any;
   category:any;
