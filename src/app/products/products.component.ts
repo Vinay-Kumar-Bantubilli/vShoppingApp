@@ -10,7 +10,7 @@ import { WishlistService } from '../services/wishlist.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent {
-  constructor(private ps:ProductsService, private ar:ActivatedRoute, private r:Router, private cs:CartService){}
+  constructor(private ps:ProductsService, private ar:ActivatedRoute, private r:Router, private ws:WishlistService, private cs:CartService){}
   products = this.ps.products;
   product:any;
   category:any;
@@ -39,16 +39,23 @@ export class ProductsComponent {
     this.cs.addItems(a.id, a.name,a.category,a.price, a.color, a.image);
   }
   
+  wishlistStatus!:boolean;
   id!:number;
   b:number = 0;
   addToWishlist(id:any, a:any){
     this.b++;
-    this.id = id;
-    console.log(this.b);
-    this.cs.addItems(a.id, a.name,a.category,a.price, a.color, a.image);
+    this.wishlistStatus = true;
+    this.ws.addItems(a.id, a.name,a.category,a.price, a.color, a.image);
   }
-  removeFromWishlist(id:any){
-    this.b--;
-    console.log(this.b);
+  removeFromWishlist(index:number){
+    this.b++;
+    this.wishlistStatus = false;
+    this.ws.deleteItems(index);
+    
   }
 }
+
+
+
+
+

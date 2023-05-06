@@ -1,0 +1,22 @@
+.footerDiv{
+    width: 100%;
+    height: auto;
+    background-color:  rgb(34, 34, 56);
+    position: fixed;
+    bottom: 0px;
+    margin: 10px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.backToTop{
+    width: 100%;
+    height: auto;
+    padding: 10px 0px;
+    background-color:  rgb(49, 49, 82);
+    text-align: center;
+}
+ul{
+    list-style: none;
+
+}

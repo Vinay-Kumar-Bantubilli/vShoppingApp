@@ -10,11 +10,6 @@
     height: 400px;
     width: 360px;
 }
-img{
-    /* background-size: 100%;
-     */
-    
-}
 .desc{
     margin-top: 50px;
     padding: 50px;
@@ -79,9 +74,6 @@ b{
     color: brown;
     text-decoration: underline;
 }
-.bank, .offer{
-}
-
 .card{
     background-color: rgb(218, 218, 218);
     padding: 20px;

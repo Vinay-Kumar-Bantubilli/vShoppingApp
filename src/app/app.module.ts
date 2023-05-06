@@ -9,7 +9,6 @@ import { ContactComponent } from './contact/contact.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { AboutComponent } from './about/about.component';
-import { BarsComponent } from './bars/bars.component';
 import { KartComponent } from './kart/kart.component';
 import { UserComponent } from './user/user.component';
 import { LikesComponent } from './likes/likes.component';
@@ -26,6 +25,9 @@ import { SignupComponent } from './signup/signup.component';
 import { JsonPipe } from '@angular/common';
 import { UsersService } from './services/users.service';
 import { WishlistService } from './services/wishlist.service';
+import { FooterComponent } from './footer/footer.component';
+import { OrderingpageComponent } from './orderingpage/orderingpage.component';
+import { OrderService } from './services/order.service';
 
 
 
@@ -33,14 +35,17 @@ import { WishlistService } from './services/wishlist.service';
 const routes:Routes= [
   {path:'', component:HomeComponent},
   {path:'home', component:HomeComponent},
-  {path:'home', component:HomeComponent},
-  {path:'login', component:LoginComponent},
-  {path:'signup', component:SignupComponent},
+
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+
+  { path: '', redirectTo: 'signup', pathMatch: 'full' },
+  { path: 'signup', component: SignupComponent },
+
   {path:'loginsuccess', component:LoginsuccessComponent},
   {path:'search', component:SearchComponent},
   {path:'about', component:AboutComponent},
   {path:'contact', component:ContactComponent},
-  {path:'bars', component:BarsComponent},
   {path:'kart', component:KartComponent},
   {path:'user', component:UserComponent},
   {path:'user/:category', component:UserComponent},
@@ -50,6 +55,7 @@ const routes:Routes= [
   {path:'products/:category', component:ProductsComponent},
   {path:'displayitem/:id', component:DisplayItemComponent},
   {path:'products/:color', component:ProductsComponent},
+  { path:'orderingpage', component:OrderingpageComponent },
   {path:'**', component:NotfoundComponent},
   
 ]
@@ -62,7 +68,6 @@ const routes:Routes= [
     ContactComponent,
     NotfoundComponent,
     AboutComponent,
-    BarsComponent,
     KartComponent,
     UserComponent,
     LikesComponent,
@@ -73,6 +78,8 @@ const routes:Routes= [
     LoginsuccessComponent,
     LoginComponent,
     SignupComponent,
+    FooterComponent,
+    OrderingpageComponent,
     
   ],
   imports: [
@@ -84,7 +91,7 @@ const routes:Routes= [
     JsonPipe
 
   ],
-  providers: [ProductsService, CartService, UsersService, WishlistService],
+  providers: [ProductsService, CartService, UsersService, WishlistService, OrderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

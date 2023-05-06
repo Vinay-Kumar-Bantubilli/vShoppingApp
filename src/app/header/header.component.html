@@ -1,7 +1,7 @@
 
 <ul class="navbar" >
     <li>
-        <p (click)="openBar()"><i id="bars" class="fa-solid fa-bars" ></i></p>
+        <p><i (click)="openSideBars()" id="bars" class="fa-solid fa-bars" ></i></p>
     </li>
     <b class="vShopping">vShopping</b>
     <li class="home">
@@ -24,9 +24,11 @@
     <li class="icon">
         <a routerLink="kart" routerLinkActive="active"><i class="fa-solid fa-cart-shopping"></i></a>
     </li>
-    <li class="icon" id="users">
-        <p class="name" *ngIf="accountHolderName != ''">{{accountHolderName}}</p>
-        <a class="login" href="/login" *ngIf="accountHolderName == null"><button>login</button></a>
+    <li class="icon" id="users" *ngIf="accountHolderName == null">
+        <a class="login" href="/login" ><button>login</button></a>
+    </li>
+    <li class="icon" *ngIf="accountHolderName != null">
+        <p class="name" >hello, {{accountHolderName}}</p>
     </li>
 
     <li class="icon" id="user">
@@ -37,6 +39,41 @@
     
 </ul>
 
-<div (click)="closeBar()">
-    <app-bars [hidden]="hideBarVar"></app-bars>
+
+<!-- bars -->
+
+<div [hidden]="hideBarStatus">
+    <div class="barsContainer" >
+    <h2 class="name" *ngIf="accountHolderName != null">Hello, {{accountHolderName}}</h2>
+    <hr>
+
+    <p class="close" (click)="closeSideBar()"><i class="fa-solid fa-xmark"></i></p>
+        <ul (click)="closeSideBar()">
+            <h3>Trending</h3>
+            <li class="a"><a routerLink="">Best Sellers</a></li>
+            <li class="a"><a routerLink="">New Releases</a></li>
+            <li class="a"><a routerLink="">Movers and Shakers</a></li>
+        </ul>
+        <hr>
+        <ul (click)="closeSideBar()">
+            <h3>Shop By Category</h3>
+            <li class="a"><a routerLink="products" [queryParams]="{'category':'Mobiles & Accessories'}">Mobiles, Computers</a></li>
+            <li class="a"><a routerLink="products" [queryParams]="{'category':'Electronics'}">Tv, Appliances, Electronics</a></li>
+            <li class="a"><a routerLink="products" [queryParams]="{'category':'Women'}">Womens Fashion</a></li>
+            <li class="a"><a routerLink="products" [queryParams]="{'category':'Men'}">Mens Fashion</a></li>
+        </ul>
+        <hr>
+        <ul (click)="closeSideBar()">
+            <h3 class="a">Help & Settings</h3>
+            <li class="a"><a routerLink="account">Your Account</a></li>
+            <li class="a"><a routerLink="contact">Customer Service</a>
+            <li class="a" *ngIf="accountHolderName == null"><a routerLink="/login">login</a></li>
+            <li class="a" *ngIf="accountHolderName != null"><a routerLink="/login" (click)="logOut()">logout as {{accountHolderName | titlecase}}</a></li>
+
+        </ul>
+        <hr><br>
+    </div>
+    <div class="notBar" (click)="closeSideBar()">
+        
+    </div>
 </div>

@@ -10,15 +10,27 @@ import { UsersService } from '../services/users.service';
 })
 export class HeaderComponent {
 
-  hideBarVar:boolean = true;
-  openBar(){
-    this.hideBarVar = false;
-    return this.hideBarVar;
+
+  constructor(private r:Router, private user:UsersService){}
+
+
+  hideBarStatus:boolean = true;
+  openSideBars(){
+    this.hideBarStatus = false;
+    return this.hideBarStatus;
+  }
+  closeSideBar(){
+    this.hideBarStatus = true;
+    return this.hideBarStatus;
   }
 
-  closeBar(){
-    this.hideBarVar = true;
-    return this.hideBarVar;
+
+  hidden!:boolean;
+  ngOnInit(){
+    this.hidden = true;
+  }
+  hideBars(){
+    this.hidden = true;
   }
 
   hideUserVar:boolean = true;
@@ -31,14 +43,15 @@ export class HeaderComponent {
     return this.hideUserVar;
   }
 
-
-  constructor(private r:Router, private user:UsersService){}
-
-  accountHolderName!:any;
-  ngDoCheck(){
-    // this.accountHolderName = localStorage.getItem("user");
+  accountHolderName!:string;
+  ngAfterViewInit(){
     this.accountHolderName = this.user.name;
-    // console.log("ngDoCheck : name : "+this.accountHolderName)
+  }
+
+
+  logOut(){
+    alert("logout successfully")
+    this.user.name = '';
   }
   
 

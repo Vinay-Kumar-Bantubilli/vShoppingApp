@@ -1,58 +1,64 @@
 <div>
-    <h1>Welcome to vShopping</h1>
-</div>
-<div class="card w-30 mx-auto mt-5">
-    <h3 class="card-header">SignUp page</h3>
-    <div class="card-body">
-        <form #ref="ngForm" (ngSubmit)="loginsuccess(ref)">
-            <div class="form-group mt-1" >
-                <label for="">Enter Name</label>
-                <input title="eg : Vinay kumar" type="text" ngModel #un="ngModel" name="username" required class="form-control" minlength="5">
-                <div class="req" *ngIf="ref.controls['username']?.['touched'] && ref.controls['username']?.['errors']">
-                    <p *ngIf="ref.controls['username']?.['errors']?.['required']">Name is required</p>
-                    <p *ngIf="ref.controls['username']?.['errors']?.['minlength']">Name is required</p>
-                </div>
-            </div>
-    
-            <div class="form-group mt-1" >
-                <label for="">Enter E-mail</label>
-                <input title="eg : vinay@gmail.com" type="email" ngModel #e="ngModel" name="email" required class="form-control" email>
-                <div class="req" *ngIf="ref.controls['email']?.['touched'] && ref.controls['email']?.['errors']">
-                    <p *ngIf="ref.controls['email']?.['errors']?.['required']">email is required</p>
-                    <p *ngIf="ref.controls['email']?.['errors']?.['email']">invalid email</p>
-                </div>
-            </div>
-    
-            <div class="form-group mt-1">
-                <label for="">Mobile</label>
-                <input title="eg : 1234123412" type="number" ngModel #n="ngModel" name="mobile" required class="form-control" minlength="10" maxlength="10">
-                <div class="req" *ngIf="ref.controls['mobile']?.['touched'] && ref.controls['mobile']?.['errors']">
-                    <p *ngIf="ref.controls['mobile']?.['errors']?.['required']">mobile is required</p>
-                    <p *ngIf="ref.controls['mobile']?.['errors']?.['minlength'] && ['maxlength']">length should be 10</p>
-
-                </div>
-            </div>
-    
-            <div class="form-group mt-1">
-                <label for="">Create Password</label>
-                <input title="crete your own password" type="password" ngModel #p="ngModel" name="password" required class="form-control" minlength="8">
-                <div class="req" *ngIf="ref.controls['password']?.['touched'] && ref.controls['password']?.['errors']">
-                    <p *ngIf="ref.controls['password']?.['errors']?.['required']">password is required</p>
-                    <p *ngIf="ref.controls['password']?.['errors']?.['minlength']">length should be 8</p>
-
-                </div>
-            </div>
-    
-            <div class="form-group mt-1">
-                <label for="">Confirm Password</label>
-                <input title="eg : confirm your password" type="password" ngModel #cp="ngModel" name="cpassword" required class="form-control">
-                <div class="req" *ngIf="ref.controls['cpassword']?.['touched'] && ref.controls['password']?.['value'] != ref.controls['cpassword']?.['value']">
-                    password must match
-                </div>
-            </div>
-
-            <button class="btn btn-primary mt-2" [disabled]="ref.invalid" >sign up</button>
-    
-        </form>
+    <div>
+        <h1>Welcome to vShopping</h1>
     </div>
+    <div class="card w-30 mx-auto mt-5">
+        <h3 class="card-header">SignUp page</h3>
+        <div class="card-body">
+            <form #ref="ngForm" (ngSubmit)="signUpSuccess(ref)">
+                <div class="form-group mt-1" >
+                    <label for="">Enter Name</label>
+                    <input title="eg : Vinay kumar" type="text" ngModel #un="ngModel" name="username" required class="form-control" minlength="5">
+                    <div class="req" *ngIf="ref.controls['username']?.['touched'] && ref.controls['username']?.['errors']">
+                        <p *ngIf="ref.controls['username']?.['errors']?.['required']">Name is required</p>
+                        <p *ngIf="ref.controls['username']?.['errors']?.['minlength']">Name is required</p>
+                    </div>
+                </div>
+        
+                <div class="form-group mt-1" >
+                    <label for="">Enter E-mail</label>
+                    <input title="eg : vinay@gmail.com" type="email" ngModel #e="ngModel" name="email" required class="form-control" email>
+                    <div class="req" *ngIf="ref.controls['email']?.['touched'] && ref.controls['email']?.['errors']">
+                        <p *ngIf="ref.controls['email']?.['errors']?.['required']">email is required</p>
+                        <p *ngIf="ref.controls['email']?.['errors']?.['email']">invalid email</p>
+                    </div>
+                </div>
+        
+                <div class="form-group mt-1">
+                    <label for="">Mobile</label>
+                    <input title="eg : 1234123412" type="number" ngModel #n="ngModel" name="mobile" required class="form-control" minlength="10" maxlength="10">
+                    <div class="req" *ngIf="ref.controls['mobile']?.['touched'] && ref.controls['mobile']?.['errors']">
+                        <p *ngIf="ref.controls['mobile']?.['errors']?.['required']">mobile is required</p>
+                        <p *ngIf="ref.controls['mobile']?.['errors']?.['minlength'] && ['maxlength']">length should be 10</p>
+    
+                    </div>
+                </div>
+        
+                <div class="form-group mt-1">
+                    <label for="">Create Password</label>
+                    <input title="crete your own password" type="password" ngModel #p="ngModel" name="password" required class="form-control" minlength="8">
+                    <div class="req" *ngIf="ref.controls['password']?.['touched'] && ref.controls['password']?.['errors']">
+                        <p *ngIf="ref.controls['password']?.['errors']?.['required']">password is required</p>
+                        <p *ngIf="ref.controls['password']?.['errors']?.['minlength']">length should be 8</p>
+    
+                    </div>
+                </div>
+        
+                <div class="form-group mt-1">
+                    <label for="">Confirm Password</label>
+                    <input title="eg : confirm your password" type="password" ngModel #cp="ngModel" name="cpassword" required class="form-control">
+                    <div class="req" *ngIf="ref.controls['cpassword']?.['touched'] && ref.controls['password']?.['value'] != ref.controls['cpassword']?.['value']">
+                        password must match
+                    </div>
+                </div>
+    
+                <button class="btn btn-primary mt-2" [disabled]="ref.invalid" >sign up</button>
+
+        
+            </form>
+            <a href="/login"><button id="login" class="btn btn-warning mt-2" >login</button></a>
+        
+        </div>
+    </div>
+    
 </div>

@@ -18,4 +18,8 @@ export class UsersService {
     localStorage.setItem("name",this.name);
   }
 
+  removeUser(name:any){
+    this.name = name;
+  }
+
 }

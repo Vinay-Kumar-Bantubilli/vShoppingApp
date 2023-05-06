@@ -1,5 +1,5 @@
 .searchDiv{
-    padding: 15px 0px;
+    padding: 6px 0px;
     background-color: rgb(205, 232, 255);
     /* background-color: rgb(255, 187, 59); */
     display: flex;
@@ -33,7 +33,7 @@ button{
     background-color: rgb(17, 255, 255, 0.2);
     font-size: 20px;
     padding: 7px;
-    border-radius: 50px;
+    border-radius: 0px 50px 50px 0px;
     /* border: 1px solid rgb(19, 19, 87); */
     transition: color 0.5s;
 }

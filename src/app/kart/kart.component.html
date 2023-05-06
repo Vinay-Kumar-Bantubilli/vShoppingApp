@@ -23,7 +23,7 @@
                             <option value="6">6</option>
                         </select>
                     </div>
-                    <button class="delete" (click)="deleteItem(i, a.price)">delete</button>
+                    <button class="delete" (click)="deleteFromCart(i, a.price)">delete</button>
                 </div>
             </div>
         </div>
@@ -33,10 +33,9 @@
         </div> 
     </div> 
     <hr>
-    <div class="total">
-        <h3>Total Price is : {{total | currency:"INR"}}</h3>
-        <button title="i'm unable get this logic">Proceed to</button>
-    </div>  
-    
 </div>
 </div>
+<div class="total">
+    <h4>Total Price is : {{total | currency:"INR"}}</h4>
+    <button title="i'm unable get this logic">Proceed to</button>
+</div>  

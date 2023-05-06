@@ -7,13 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-  constructor(private r:Router){}
+  constructor(public r:Router){}
 
   users = [
     {name:null, email:null, mobile:null, password:null, cpassword:null }
   ]
 
-  loginsuccess(ref:any){
+  signUpSuccess(ref:any){
     // console.log(ref)
     alert("account creation successfully. Please login")
     localStorage.setItem("user",JSON.stringify(this.users))

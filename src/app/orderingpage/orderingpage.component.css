@@ -1,0 +1,28 @@
+div{
+    display: flex;
+    justify-content: center;
+}
+.orderSuccessful{
+    border: 1px solid rgb(175, 175, 175);
+    position: absolute;
+    top: 280px;
+    padding: 8px 6px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: bottom 1s;
+}
+/* .orderSuccessful1{
+    border: 1px solid rgb(175, 175, 175);
+    position: relative;
+    bottom: 30px;
+    padding: 8px 6px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: aquamarine;
+} */
+.button{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 150px;
+}

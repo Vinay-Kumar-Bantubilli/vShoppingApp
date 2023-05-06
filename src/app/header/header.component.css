@@ -7,13 +7,10 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0px;
+    overflow-x: auto;
 }
 .name{
     color: white;
-}
-.login{
-    position: relative;
-    bottom: 15px;
 }
 .vShopping{
     color: aqua;
@@ -42,9 +39,9 @@ a:hover{
 }
 #icon{
     display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    top: 10px;
+    margin: 3px 5px;
+    align-items: center;
+    justify-content: center;
 }
 button{
     background-color: transparent;
@@ -53,15 +50,19 @@ button{
     font-size: 15px;
 }
 .home{
-    margin-left: 360px;
+    margin-left: 330px;
 }
 #bars{
     cursor: pointer;
     color: white;
-    position: absolute;
-    left: 50px;
-    top: 27px;
     font-size: 25px;
+    position: relative;
+    top: 8px;
+    left: 50px;
+    transition: rotate 0.5s;
+}
+#bars:hover{
+    rotate: 90deg;
 }
 .search{
     border: none;
@@ -84,4 +85,73 @@ button{
     bottom: 5px;
     color: black;
     cursor: pointer;
+}
+.name{
+    font-size: 13px;
+    position: relative;
+    top: 8px;
+}
+
+
+
+
+
+
+
+.notBar{
+    background-color: rgb(0, 0, 0, 0.6);
+    height: 100vh;
+    width: 75vw;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 9;
+    overflow-y: hidden;
+}
+hr{
+    color: rgb(158, 158, 158);
+}
+.barsContainer{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 26.4vw;
+    height: 100vh;
+    background-color: rgb(34, 34, 56);
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    box-shadow: 4px 4px 10px black;
+    padding: 30px 25px;
+    z-index: 10;
+    overflow-y: auto;
+    
+}
+.name{
+    color: white;
+}
+ul{
+    list-style: none;
+    color: white;
+}
+
+.a{
+    margin: 10px 0px;
+    padding: 8px 0px;
+    padding-left: 20px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.close{
+    position: absolute;
+    left: 300px;
+    top: -2px;
+    color: white;
+    font-size: 35px;
+    z-index: 10;
+    cursor: pointer;
+    transition: rotate 0.5s;
+}
+.close:hover{
+    rotate: 44deg;
 }

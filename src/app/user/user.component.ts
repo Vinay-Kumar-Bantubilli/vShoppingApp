@@ -29,13 +29,15 @@ export class UserComponent {
   // }
 
   constructor(private r:Router, private users:UsersService) {}
-  userName:string = "";
-  ngDoCheck(){
+  userName!:string;
+  ngAfterViewInit(){
     this.userName = this.users.name;
     console.log("ngDoCheck"+this.userName)
   }
 
   toLoginPage(){
+    alert("logout successfull");
     this.r.navigate(['login']);
   }
+
 }

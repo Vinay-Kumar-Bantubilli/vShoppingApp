@@ -1,7 +1,9 @@
 <div class="array">
-   <div>
-        <h1 class="previous"><i class="fa-solid fa-angle-left" (click)="previous()"></i></h1>
-        <h1 class="next"><i class="fa-solid fa-angle-right"  (click)="next()"></i></h1>
+   <div class="image">
+        <div class="arrows">
+            <h1 class="previous"><i class="fa-solid fa-angle-left" (click)="previous()"></i></h1>
+            <h1 class="next"><i class="fa-solid fa-angle-right"  (click)="next()"></i></h1>
+        </div>
         <img [src]="path" alt="No image found" (click)="imageDirect()">
     </div>
 </div>

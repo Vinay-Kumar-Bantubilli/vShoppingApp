@@ -13,7 +13,7 @@ export class KartComponent {
 
   total:number = 0;
   
-  ngAfterContentChecked(){
+  ngAfterContentInit(){
     for (let a of this.cs.cartArray){
       this.total+=a.price;
       console.log("total amount is : "+this.total)
@@ -29,7 +29,7 @@ export class KartComponent {
     console.log(this.total)
   }
 
-  deleteItem(index:any, price:any){
+  deleteFromCart(index:any, price:any){
     console.log(index)
     this.cs.deleteItems(index);
     this.total-=price;

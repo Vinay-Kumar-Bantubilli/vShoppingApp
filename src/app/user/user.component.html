@@ -1,7 +1,7 @@
 <div>
-    <h1>{{userName}}</h1>
+    <h1>{{userName | titlecase}}</h1>
     <h1>Your Account</h1>
-    <button class="btn btn-danger mt-4" (click)="toLoginPage()">logout</button>
+    <button *ngIf="userName != null" class="btn btn-danger mt-4" (click)="toLoginPage()">logout</button>
 </div>
 <hr>
 <h2>Some things you can do here</h2>

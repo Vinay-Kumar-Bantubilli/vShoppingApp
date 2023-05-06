@@ -8,7 +8,7 @@ import { UsersService } from '../services/users.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  constructor(private r:Router, private user:UsersService){}
+  constructor(public r:Router, private user:UsersService){}
 
   loginObj:any = [
     {name:'', password:''},
@@ -21,7 +21,10 @@ export class LoginComponent {
     this.r.navigate(['/home']);
   }
 
-  openLoginPage(){
+  openSignUpPage(){
     this.r.navigate(['/signup']);
   }
+
+
+  
 }
