@@ -9,6 +9,7 @@
         <del class="cross"><h2>{{product.price | currency:'INR'}}</h2></del><br>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, ab Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, quia.</p><br>
         <div class="buttons">
+            <p class="orderSuccessful" [hidden]="hide" >Added to cart successfully</p>
             <button class="cart" (click)="addItem(product)">Add to Cart</button>
             <a routerLink="/orderingpage"><button class="buy">Buy Now</button></a>
         </div><br>

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../products.service';
 import { ActivatedRoute } from '@angular/router';
 import { CartService } from '../services/cart.service';
+import { interval } from 'rxjs';
+
 
 @Component({
   selector: 'app-displayitem',
@@ -16,7 +18,7 @@ export class DisplayItemComponent {
   id!:any;
   ngOnInit(){
     this.ar.paramMap.subscribe(
-      param=>{
+      (param)=>{
         let productId = param.get('id');
         this.id = productId;
         // this.product = this.ps.products.filter(p=>'p.id' == productId);
@@ -34,9 +36,24 @@ export class DisplayItemComponent {
     }
   }
 
+
+  hide:boolean = true;
+  intervals = interval(4000);  
   addItem(a:any){
     this.cs.addItems(a.id, a.name,a.category,a.price, a.color, a.image);
     sessionStorage.setItem("id",a.id);
+
+    //code for added to cart succefully
+    this.hide = false;
+    this.intervals.subscribe(
+      ()=> {
+        this.stopDisplaying();
+      }
+    )
+  }
+
+  stopDisplaying(){
+    this.hide = true;
   }
   
 

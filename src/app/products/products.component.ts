@@ -3,6 +3,8 @@ import { ProductsService } from '../products.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CartService } from '../services/cart.service';
 import { WishlistService } from '../services/wishlist.service';
+import { interval } from 'rxjs';
+
 
 @Component({
   selector: 'app-products',
@@ -35,10 +37,25 @@ export class ProductsComponent {
     )
   }
 
+
+  cartId!:number;
+  hide:boolean = true;
+  c:number = 0;
+  intervals = interval(4000);
+
   addItem(a:any){
     this.cs.addItems(a.id, a.name,a.category,a.price, a.color, a.image);
+    //code for added to cart succefully
+    this.hide = false;
+    this.cartId = a.id;
+
+    setTimeout(()=>{
+    this.hide = true;
+    },2000
+    );
   }
-  
+
+
   wishlistStatus!:boolean;
   id!:number;
   b:number = 0;
@@ -46,7 +63,10 @@ export class ProductsComponent {
     this.b++;
     this.wishlistStatus = true;
     this.ws.addItems(a.id, a.name,a.category,a.price, a.color, a.image);
+
   }
+
+
   removeFromWishlist(index:number){
     this.b++;
     this.wishlistStatus = false;

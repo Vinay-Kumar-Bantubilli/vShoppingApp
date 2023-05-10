@@ -1,6 +1,7 @@
 .navbar{
     margin: 0px;
     display: flex;
+    justify-content: flex-start;
     list-style: none;
     padding: 8px 30px;
     background-color: rgb(167, 214, 255);
@@ -21,4 +22,18 @@ a:hover{
 .active{
     box-shadow: 0px 0px 3px rgb(34, 34, 56);
 
+}
+
+@media screen and (max-width: 650px){
+    li{
+        margin: 2px 3px;
+    }
+    .navbar{
+        margin: 0px;
+        padding: 4px 6px;
+    }
+    a{
+        padding:4px 5px;
+        font-size: 11px;
+    }
 }

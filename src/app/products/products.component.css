@@ -80,3 +80,18 @@ button{
     width: 28px;
     margin-top: 25px;
 }
+.orderSuccessful{
+    border: 1px solid rgb(175, 175, 175);
+    position: absolute;
+    width: 180px;
+    top: -50px;
+    right: 10px;
+    background-color: aqua;
+    padding: 8px 6px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: bottom 1s;
+}
+.buying{
+    position: relative;
+}

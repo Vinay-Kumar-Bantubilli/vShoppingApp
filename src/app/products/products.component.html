@@ -21,10 +21,11 @@
                 </div>
                
                 <div class="buying">
-                    <button class="cart" (click)="addItem(a)">Add to cart</button><br>
-                    <a [routerLink]="['/displayitem', a.id]"  routerLinkActive="active">
-                        <button class="buyb">Buy Now</button>
-                    </a>
+                        <p class="orderSuccessful" [hidden]="hide" *ngIf="a.id == cartId">Added to cart successfully</p>
+                        <button class="cart" (click)="addItem(a)">Add to cart</button><br>
+                        <a [routerLink]="['/displayitem', a.id]"  routerLinkActive="active">
+                            <button class="buyb">Buy Now</button>
+                        </a>
                 </div>
             </div>
         </div>

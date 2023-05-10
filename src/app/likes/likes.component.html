@@ -4,7 +4,9 @@
     <hr>
     <br>
     <div *ngFor="let a of product ; index as i" class="body">
-        <img [src]="a.image" alt="no image found">
+        <div class="image">
+            <img [src]="a.image" alt="no image found">
+        </div>
         <div class="product">
             <div>
                 <p>{{a.name}}</p>
